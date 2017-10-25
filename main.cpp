@@ -7,6 +7,7 @@
 using namespace std;
 using namespace cv;
 
+// 测试程序, 接口在"HardwareController.h"
 int main() {
     cout << "Communication test" << endl;
     TCPSerial tcpSerial("192.168.4.1", 9000, true);
@@ -15,7 +16,8 @@ int main() {
     VideoCapture capture(0);
     Mat frame;
     while (capture.read(frame)) {
-        putText(frame,"WASD ->gimbal; K L->shooting motor; O P -> friction wheel",Point(0,25),FONT_HERSHEY_SIMPLEX,0.5,Scalar(0,0,0));
+        putText(frame, "WASD ->gimbal; K L->shooting motor; O P -> friction wheel", Point(0, 25), FONT_HERSHEY_SIMPLEX,
+                0.5, Scalar(0, 0, 0));
         imshow("Test", frame);
         int key = waitKey(1);
         key = tolower(key);
@@ -56,7 +58,7 @@ int main() {
                 hardware.requestCurrentState();
                 break;
             }
-            default:{
+            default: {
                 //hardware.stopGimble();
             }
         }
