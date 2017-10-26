@@ -58,6 +58,14 @@ int main() {
                 hardware.requestCurrentState();
                 break;
             }
+            case '0':{
+                hardware.reset();
+                break;
+            }
+            case ' ':{
+                hardware.stopGimble();
+                break;
+            }
             default: {
                 //hardware.stopGimble();
             }
