@@ -7,6 +7,8 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <unistd.h>
+#include <cstring>
 #include "TCPSerial.h"
 
 TCPSerial::TCPSerial(std::string ip, short port, bool printFeedback = false) {

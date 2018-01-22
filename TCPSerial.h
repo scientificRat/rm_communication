@@ -6,9 +6,6 @@
 #define RM_COMMUNICATION_TCPSERIAL_H
 
 
-#include <cstdint>
-#include <cstddef>
-#include <string>
 #include "Serial.h"
 
 

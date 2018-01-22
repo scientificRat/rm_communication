@@ -5,10 +5,9 @@
 #ifndef RM_COMMUNICATION_SERIAL_H
 #define RM_COMMUNICATION_SERIAL_H
 
-#include <unistd.h>
+
 #include <cstdint>
 #include <cstddef>
-#include <cstdio>
 
 // abstract class
 class Serial {
